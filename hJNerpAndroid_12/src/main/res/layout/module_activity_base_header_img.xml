@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!--头部-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_headerToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:contentInsetStart="0dp"
+        android:navigationContentDescription="back">
+
+
+        <TextView
+            android:id="@+id/base_imgleftTv"
+            style="@style/Module_TlbarTv_ComTheme"
+            android:textColor="@color/tbTVColorLeft"
+            android:drawableLeft="@drawable/module_tolbar_backup"
+            android:paddingRight="@dimen/size_10"
+            android:text="@string/action_left_content_back"/>
+
+
+        <TextView
+            android:id="@+id/base_imgCenterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="标题"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_18" />
+
+        <ImageView
+            android:id="@+id/base_imgRightImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:paddingRight="@dimen/size_10" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/base_view"
+        style="@style/Module_DivisionView_HzTheme"
+        android:layout_below="@+id/main_headerToolbar" />
+
+    <!--内容容器-->
+    <FrameLayout
+        android:id="@+id/mainFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/base_view"
+        android:background="@color/appDefaultBg" />
+
+</RelativeLayout>

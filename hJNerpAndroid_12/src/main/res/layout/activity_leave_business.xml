@@ -113,7 +113,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/travel_Title_LeavrDay" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/leave_days"
                     style="@style/Item_LinearLayout_EdRightTitleStyle"
                     android:inputType="numberDecimal"
@@ -131,7 +131,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/travel_Title_LeavrReason" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/leave_reason"
                     style="@style/Item_LinearLayout_EdRightTitleStyle"
                     android:hint="@string/travel_Hint_LeavrReason" />

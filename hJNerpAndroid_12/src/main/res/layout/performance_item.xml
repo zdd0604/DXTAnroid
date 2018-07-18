@@ -55,7 +55,7 @@
                 style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                 android:text="@string/pfItem_Title_perfIdKpipost" />
 
-            <com.hjnerp.widget.ClearEditText
+            <com.dxtnerp.widget.ClearEditText
                 android:id="@+id/input_id_kpipost"
                 style="@style/Item_LinearLayout_EdRightTitleStyle"
                 android:hint="@string/pfItem_Hint_perfIdKpipost"/>
@@ -70,7 +70,7 @@
                 style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                 android:text="@string/pfItem_Title_perfVarEvastd" />
 
-            <com.hjnerp.widget.ClearEditText
+            <com.dxtnerp.widget.ClearEditText
                 android:id="@+id/input_var_evastd"
                 style="@style/Item_LinearLayout_EdRightTitleStyle"
                 android:hint="@string/pfItem_Hint_perfVarEvastd"/>
@@ -87,7 +87,7 @@
                 style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                 android:text="@string/pfItem_Title_perfVarComp" />
 
-            <com.hjnerp.widget.ClearEditText
+            <com.dxtnerp.widget.ClearEditText
                 android:id="@+id/input_var_comp"
                 style="@style/Item_LinearLayout_EdRightTitleStyle" />
         </LinearLayout>
@@ -100,7 +100,7 @@
                 style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                 android:text="@string/pfItem_Title_perfDecScale" />
 
-            <com.hjnerp.widget.ClearEditText
+            <com.dxtnerp.widget.ClearEditText
                 android:id="@+id/input_dec_scale"
                 style="@style/Item_LinearLayout_EdRightTitleStyle"
                 android:hint="@string/pfItem_Hint_perfDecScale"
@@ -116,7 +116,7 @@
                 style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                 android:text="@string/pfItem_Title_perfDecMark" />
 
-            <com.hjnerp.widget.ClearEditText
+            <com.dxtnerp.widget.ClearEditText
                 android:id="@+id/input_dec_mark"
                 style="@style/Item_LinearLayout_EdRightTitleStyle"
                 android:hint="@string/pfItem_Hint_perfDecMark"

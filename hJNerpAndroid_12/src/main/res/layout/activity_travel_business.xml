@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/activity_bg"
-    tools:context="com.hjnerp.business.activity.TravelBusiness">
+    tools:context="com.dxtnerp.business.activity.TravelBusiness">
 
     <include
         android:id="@+id/travel_bss_action"
@@ -66,7 +66,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/Travel_Title_TravelPartner" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/travel_partner"
                     style="@style/Item_LinearLayout_EdRightTitleStyle" />
             </LinearLayout>
@@ -109,7 +109,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/Travel_Title_TravelReason" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/travel_reason"
                     style="@style/Item_LinearLayout_EdRightTitleStyle"
                     android:hint="@string/Travel_Hint_TravelReason"/>
@@ -151,7 +151,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/Travel_Title_TravelPay" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/travel_pay"
                     android:inputType="numberDecimal"
                     style="@style/Item_LinearLayout_EdRightTitleStyle" />

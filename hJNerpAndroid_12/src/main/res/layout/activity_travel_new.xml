@@ -4,7 +4,7 @@
     android:id="@+id/activity_travel_new"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hjnerp.business.activity.TravelActivityNew">
+    tools:context="com.dxtnerp.business.activity.TravelActivityNew">
 
     <include
         android:id="@+id/travel_action"

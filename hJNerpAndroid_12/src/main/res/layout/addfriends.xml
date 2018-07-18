@@ -13,7 +13,7 @@
         android:background="@color/white"
         android:orientation="horizontal" >
 
-        <com.hjnerp.widget.ClearEditText
+        <com.dxtnerp.widget.ClearEditText
             android:id="@+id/input_et"
             android:layout_width="1dp"
             android:layout_height="45dp"

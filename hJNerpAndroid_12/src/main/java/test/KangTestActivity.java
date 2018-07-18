@@ -3,7 +3,7 @@ package test;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.hjnerpandroid.R;
+import com.dxtnerp.R;
 
 public class KangTestActivity extends Activity{
 	@Override

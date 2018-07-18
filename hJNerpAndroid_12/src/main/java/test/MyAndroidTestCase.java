@@ -10,14 +10,14 @@ import android.test.AndroidTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 import android.util.Log;
 
-import com.hjnerp.business.BusinessLua;
-import com.hjnerp.dao.QiXinBaseDao;
-import com.hjnerp.db.Tables;
-import com.hjnerp.model.ChatHisBean;
-import com.hjnerp.model.GroupInfo;
-import com.hjnerp.model.VerfifyFriendInfo;
-import com.hjnerp.net.HttpUtils;
-import com.hjnerp.util.LuaLoadScript;
+import com.dxtnerp.business.BusinessLua;
+import com.dxtnerp.dao.QiXinBaseDao;
+import com.dxtnerp.db.Tables;
+import com.dxtnerp.model.ChatHisBean;
+import com.dxtnerp.model.GroupInfo;
+import com.dxtnerp.model.VerfifyFriendInfo;
+import com.dxtnerp.net.HttpUtils;
+import com.dxtnerp.util.LuaLoadScript;
 
 public class MyAndroidTestCase extends AndroidTestCase
 {

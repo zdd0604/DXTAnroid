@@ -76,7 +76,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/over_Title_OverDays" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/over_days"
                     style="@style/Item_LinearLayout_EdRightTitleStyle"
                     android:hint="@string/over_Hint_OverDays"
@@ -93,7 +93,7 @@
                     style="@style/Item_LinearLayout_TVLeftTieleStyle2"
                     android:text="@string/over_Title_OverReson" />
 
-                <com.hjnerp.widget.ClearEditText
+                <com.dxtnerp.widget.ClearEditText
                     android:id="@+id/over_reason"
                     style="@style/Item_LinearLayout_EdRightTitleStyle"
                     android:hint="@string/over_Hint_OverReson" />

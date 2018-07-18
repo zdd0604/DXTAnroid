@@ -62,7 +62,7 @@
             style="@style/Item_LinearLayout_TVLeftTieleStyle2"
             android:text="@string/detail_Title_AbnormalUnderstand" />
 
-        <com.hjnerp.widget.ClearEditText
+        <com.dxtnerp.widget.ClearEditText
             android:id="@+id/abnormal_remark"
             style="@style/Item_LinearLayout_EdRightTitleStyle"
             android:hint="@string/detail_Hint_AbnormalUnderstand"/>

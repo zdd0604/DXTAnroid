@@ -572,4 +572,16 @@
 
     <!-- 考勤打卡 -->
     <color name="mapLocationError">#ffa727</color>
+
+    <!-- toolbar 左边标题字体颜色 -->
+    <color name="tbTVColorLeft">#2682ff</color>
+
+    <!-- 分割线的颜色 -->
+    <color name="appDivisionBg">#DDDDDD</color>
+
+    <!-- app默认背景色 -->
+    <color name="appDefaultBg">#F5F5F9</color>
+
+    //透明
+    <color name="lucency">#cc000000</color>
 </resources>

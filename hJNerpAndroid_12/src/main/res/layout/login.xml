@@ -53,7 +53,7 @@
             style="@style/Item_View_ViewDividerVerticalStyle"
             android:layout_gravity="center_vertical" />
 
-        <com.hjnerp.widget.SelectText
+        <com.dxtnerp.widget.SelectText
             android:id="@+id/ui_company_input"
             android:layout_width="fill_parent"
             android:layout_height="45dip"
