@@ -13,7 +13,7 @@ import android.util.Log;
 import com.dxtnerp.business.BusinessLua;
 import com.dxtnerp.dao.QiXinBaseDao;
 import com.dxtnerp.db.Tables;
-import com.dxtnerp.model.ChatHisBean;
+import com.dxtnerp.model.md_im.ChatHisBean;
 import com.dxtnerp.model.GroupInfo;
 import com.dxtnerp.model.VerfifyFriendInfo;
 import com.dxtnerp.net.HttpUtils;

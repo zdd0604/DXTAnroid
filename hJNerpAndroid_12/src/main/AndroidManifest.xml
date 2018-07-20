@@ -91,38 +91,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dxtnerp.business.activity.SearchBussinessPicture"
+            android:name="com.dxtnerp.business.bs_activity.SearchBussinessPicture"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="standard" />
         <activity
-            android:name="com.dxtnerp.business.activity.BussinessUploadActivity"
+            android:name="com.dxtnerp.business.bs_activity.BussinessUploadActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!-- 主页面 -->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessActivity"
+            android:name="com.dxtnerp.business.bs_activity.BusinessActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar" />
         <activity
-            android:name="com.dxtnerp.business.activity.AttendanceInfoActivity"
+            android:name="com.dxtnerp.business.bs_activity.AttendanceInfoActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@style/ActionbarText" />
         <activity
-            android:name="com.dxtnerp.business.activity.AttendanceLocActivity"
+            android:name="com.dxtnerp.business.bs_activity.AttendanceLocActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.dxtnerp.business.activity.SearchRouteActivity"
+            android:name="com.dxtnerp.business.bs_activity.SearchRouteActivity"
             android:launchMode="standard"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.dxtnerp.activity.MainActivity"
+            android:name="com.dxtnerp.MainActivity"
             android:excludeFromRecents="false"
             android:exported="false"
             android:launchMode="singleTask"
@@ -130,13 +130,13 @@
             android:theme="@style/Theme.HjNoActionBar" />
         <!-- 公告界面 -->
         <activity
-            android:name="com.dxtnerp.activity.im.NoticeActivity"
+            android:name="com.dxtnerp.activity.ac_im.NoticeActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <!-- 聊天界面 -->
         <activity
-            android:name="com.dxtnerp.activity.im.ChatActivity"
+            android:name="com.dxtnerp.activity.ac_im.ChatActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:exported="false"
             android:launchMode="singleTask"
@@ -144,7 +144,7 @@
 
         <!-- 朋友信息及个信息 -->
         <activity
-            android:name="com.dxtnerp.activity.contact.FriendsActivity"
+            android:name="com.dxtnerp.activity.ac_contact.FriendsActivity"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:launchMode="standard"
             android:screenOrientation="portrait"
@@ -153,49 +153,49 @@
 
         <!-- 发起群聊选择好友界面 -->
         <activity
-            android:name="com.dxtnerp.activity.im.SelectGroupChatMemberActivity"
+            android:name="com.dxtnerp.activity.ac_im.SelectGroupChatMemberActivity"
             android:launchMode="standard" />
         <!-- 发起群聊选择好友界面，按部门排序 -->
         <activity
-            android:name="com.dxtnerp.activity.im.SelectGroupChatMemberDeptActivity"
+            android:name="com.dxtnerp.activity.ac_im.SelectGroupChatMemberDeptActivity"
             android:launchMode="standard"
             android:theme="@style/Theme.HjNoActionBar" />
         <!-- 群聊查看组内好友界面 -->
         <activity
-            android:name="com.dxtnerp.activity.im.ShowGroupChatMemberActivity"
+            android:name="com.dxtnerp.activity.ac_im.ShowGroupChatMemberActivity"
             android:launchMode="standard" />
         <activity
-            android:name="com.dxtnerp.activity.im.ShowGroupActivity"
+            android:name="com.dxtnerp.activity.ac_im.ShowGroupActivity"
             android:launchMode="standard" />
         <!-- 电话列表 -->
         <activity
-            android:name="com.dxtnerp.activity.contact.PhoneContactListActivity"
+            android:name="com.dxtnerp.activity.ac_contact.PhoneContactListActivity"
             android:exported="false"
             android:launchMode="standard" />
         <!-- 添加好友界面 -->
         <activity
-            android:name="com.dxtnerp.activity.contact.SearchQiXinFriendsActivity"
+            android:name="com.dxtnerp.activity.ac_contact.SearchQiXinFriendsActivity"
             android:launchMode="standard" />
         <activity
-            android:name="com.dxtnerp.activity.contact.SearchQiXinFriendsretActivity"
+            android:name="com.dxtnerp.activity.ac_contact.SearchQiXinFriendsretActivity"
             android:launchMode="standard" />
 
         <!-- 审批业务界面 -->
         <activity
-            android:name="com.dxtnerp.activity.work.ApprovalActivity"
+            android:name="com.dxtnerp.activity.ac_work.ApprovalActivity"
             android:launchMode="standard"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <!-- 待添加好友信息页面界面 -->
         <activity
-            android:name="com.dxtnerp.activity.contact.AddingFriendActivity"
+            android:name="com.dxtnerp.activity.ac_contact.AddingFriendActivity"
             android:launchMode="standard" />
         <!-- 通用设置 -->
 
 
         <!-- 全部新的朋友页面 -->
         <activity
-            android:name="com.dxtnerp.activity.contact.AllVerfifyFriendsActivity"
+            android:name="com.dxtnerp.activity.ac_contact.AllVerfifyFriendsActivity"
             android:launchMode="standard" />
         <!-- 修改密码 -->
         <activity
@@ -228,7 +228,7 @@
             android:launchMode="singleInstance" />
         -->
         <activity
-            android:name="com.dxtnerp.activity.qrcode.CaptureActivity"
+            android:name="com.dxtnerp.activity.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="standard"
             android:screenOrientation="portrait"
@@ -240,16 +240,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dxtnerp.activity.im.ShowChatPictureActivity"
+            android:name="com.dxtnerp.activity.ac_im.ShowChatPictureActivity"
             android:launchMode="standard" />
         <activity
-            android:name="com.dxtnerp.business.activity.AddRouteActivity"
+            android:name="com.dxtnerp.business.bs_activity.AddRouteActivity"
             android:launchMode="standard" />
         <activity
             android:name="com.dxtnerp.activity.ExitAppActivity"
             android:launchMode="standard" />
         <activity
-            android:name="com.dxtnerp.activity.AboutHJActivity"
+            android:name="com.dxtnerp.activity.ac_about.AboutHJActivity"
             android:launchMode="standard"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
@@ -260,29 +260,32 @@
             android:exported="true" />
 
         <activity
-            android:name="com.dxtnerp.business.activity.BussinessHtmlActivity"
+            android:name="com.dxtnerp.business.bs_activity.BussinessHtmlActivity"
             android:hardwareAccelerated="true"
             android:launchMode="standard"
             android:theme="@android:style/Theme.Translucent" />
         <activity
-            android:name="com.dxtnerp.business.activity.DisCardFage"
+            android:name="com.dxtnerp.business.bs_activity.DisCardFage"
             android:theme="@style/Theme.HjNoActionBar" />
-        <activity android:name="com.dxtnerp.business.activity.OfflineMap" />
+
+        <activity android:name="com.dxtnerp.business.bs_activity.OfflineMap" />
+
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessDdisplocathActivity"
+            android:name="com.dxtnerp.business.bs_activity.BusinessDdisplocathActivity"
             android:theme="@style/registerTheme" />
+
         <activity
-            android:name="com.dxtnerp.activity.im.LocationActivity"
+            android:name="com.dxtnerp.activity.ac_im.LocationActivity"
             android:theme="@style/ActionbarText" />
         <!-- 文件列表界面 -->
         <activity
-            android:name="com.dxtnerp.activity.im.FileListActivity"
+            android:name="com.dxtnerp.activity.ac_im.FileListActivity"
             android:theme="@style/ActionbarText" />
         <activity
-            android:name="com.dxtnerp.activity.html.HjAboutInformation"
+            android:name=".html.HjAboutInformation"
             android:theme="@style/registerTheme" />
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessEJActivity"
+            android:name="com.dxtnerp.business.bs_activity.BusinessEJActivity"
             android:theme="@style/registerTheme" />
         <!--
                 <service android:name="com.hjnerp.service.ReConnectService"></service>
@@ -303,7 +306,7 @@
                 </receiver>
         -->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessPerformanceInput"
+            android:name="com.dxtnerp.business.bs_activity.BusinessPerformanceInput"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
@@ -326,110 +329,110 @@
 
         <!-- 个人头像界面 -->
         <activity
-            android:name="com.dxtnerp.activity.myinfo.ShowPortraitActivity"
+            android:name="com.dxtnerp.activity.ShowPortraitActivity"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 关于和佳 -->
         <activity
-            android:name="com.dxtnerp.activity.HJAboutInfoActivity"
+            android:name="com.dxtnerp.activity.ac_about.HJAboutInfoActivity"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 联系我们 -->
         <activity
-            android:name="com.dxtnerp.activity.HJCallPhoneActivity"
+            android:name="com.dxtnerp.activity.ac_about.HJCallPhoneActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--考前签到-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessEJLocation"
+            android:name="com.dxtnerp.business.bs_activity.BusinessEJLocation"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--出差外出单、休假申请单、加班申请单、考勤异常申诉、和佳ERP-->
         <activity
-            android:name="com.dxtnerp.business.activity.TravelActivityNew"
+            android:name="com.dxtnerp.business.bs_activity.TravelActivityNew"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--出差外出单-->
         <activity
-            android:name="com.dxtnerp.business.activity.TravelBusiness"
+            android:name="com.dxtnerp.business.bs_activity.TravelBusiness"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--搜索-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessSearch"
+            android:name="com.dxtnerp.business.bs_activity.BusinessSearch"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--工作日志-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessDgtdrechtml"
+            android:name="com.dxtnerp.business.bs_activity.BusinessDgtdrechtml"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--休假申请单-->
         <activity
-            android:name="com.dxtnerp.business.activity.LeaveBusiness"
+            android:name="com.dxtnerp.business.bs_activity.LeaveBusiness"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--休假申请单-->
         <activity
-            android:name="com.dxtnerp.business.activity.OverBusiness"
+            android:name="com.dxtnerp.business.bs_activity.OverBusiness"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--考勤异常申述-->
         <activity
-            android:name="com.dxtnerp.business.activity.AbnormalBusiness"
+            android:name="com.dxtnerp.business.bs_activity.AbnormalBusiness"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--考勤异常申述选择界面-->
         <activity
-            android:name="com.dxtnerp.business.activity.AbnormalDetail"
+            android:name="com.dxtnerp.business.bs_activity.AbnormalDetail"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--绩效计划录入列表界面-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessPerformanceArrayList"
+            android:name="com.dxtnerp.business.bs_activity.BusinessPerformanceArrayList"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--绩效计划录入表界面-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessPerformanceTypeIn"
+            android:name="com.dxtnerp.business.bs_activity.BusinessPerformanceTypeIn"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--绩效计划录入表界面 列表进入页面审批页面-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessPerformanceAudit"
+            android:name="com.dxtnerp.business.bs_activity.BusinessPerformanceAudit"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!--绩效计划审核、确认、自述..列表界面-->
         <activity
-            android:name="com.dxtnerp.business.activity.BusinessBillsActivity"
+            android:name="com.dxtnerp.business.bs_activity.BusinessBillsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
