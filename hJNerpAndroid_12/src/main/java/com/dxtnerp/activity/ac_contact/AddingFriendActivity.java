@@ -28,7 +28,7 @@ import com.dxtnerp.model.VerfifyFriendInfo;
 import com.dxtnerp.net.ChatConstants;
 import com.dxtnerp.net.ChatPacketHelper;
 import com.dxtnerp.net.IQ;
-import com.dxtnerp.util.ImageLoaderHelper;
+import com.dxtnerp.util.img.ImageLoaderHelper;
 import com.dxtnerp.util.StringUtil;
 
 import java.io.Serializable;

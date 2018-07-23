@@ -13,14 +13,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.dxtnerp.R;
-import com.dxtnerp.util.BitmapUtils;
+import com.dxtnerp.util.img.BitmapUtils;
 
 
 /**

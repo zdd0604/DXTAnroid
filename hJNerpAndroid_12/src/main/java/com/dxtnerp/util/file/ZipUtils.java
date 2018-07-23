@@ -1,4 +1,6 @@
-package com.dxtnerp.util;
+package com.dxtnerp.util.file;
+
+import com.dxtnerp.util.Log;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

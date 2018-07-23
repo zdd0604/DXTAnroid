@@ -1,4 +1,4 @@
-package com.dxtnerp.util;
+package com.dxtnerp.util.md5;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

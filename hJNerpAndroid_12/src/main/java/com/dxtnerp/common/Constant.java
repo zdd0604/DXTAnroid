@@ -2,6 +2,8 @@ package com.dxtnerp.common;
 
 import android.os.Environment;
 
+import com.dxtnerp.model.bs_work.TextModule;
+import com.dxtnerp.model.bs_work.TextModule2;
 import com.dxtnerp.model.md_ctlm.Ctlm1345;
 import com.dxtnerp.model.md_ctlm.Ctlm7161;
 import com.dxtnerp.model.DdisplocatBean;
@@ -329,6 +331,14 @@ public class Constant {
     public static final String kpiperiod_MM = "MM";
 
 
+    //Handler传递
+    public static final int HANDLERTYPE_0 = 0;
+    public static final int HANDLERTYPE_1 = 1;
+    public static final int HANDLERTYPE_2 = 2;
+    public static final int HANDLERTYPE_3 = 3;
+    public static final int HANDLERTYPE_4 = 4;
+    public static final int HANDLERTYPE_5 = 5;
+    public static final int HANDLERTYPE_6 = 6;
 
     public static Ej1345 ej1345;
     public static EjWadd1345 ejWadd1345;
@@ -352,6 +362,13 @@ public class Constant {
     public static String id_wproj;
     public static String id_corr;
 
+    //模版名称
+    public static String  Clicked_xml_nameModel = "";
+    /**
+     * 关于
+     */
+    public static List<HJAboutBean> HJbean;
+
 
     /**
      * 考勤签到
@@ -367,6 +384,11 @@ public class Constant {
      * 出差外出
      */
     public static boolean travel;
+
+    //功能ID
+    public static String  OperationID = "OperationID";
+    //功能名称
+    public static String  OperationName = "OperationName";
 
     //模板的名称
     //绩效计划录入
@@ -428,20 +450,11 @@ public class Constant {
     //待审单据查询
     public static String  dflagsts = "dflagsts";
 
-    /**
-     * 关于
-     */
-    public static List<HJAboutBean> HJbean;
+    //测试
+    public static TextModule textModule;
+    public static TextModule2 textModule2;
 
 
-    //Handler传递
-    public static final int HANDLERTYPE_0 = 0;
-    public static final int HANDLERTYPE_1 = 1;
-    public static final int HANDLERTYPE_2 = 2;
-    public static final int HANDLERTYPE_3 = 3;
-    public static final int HANDLERTYPE_4 = 4;
-    public static final int HANDLERTYPE_5 = 5;
-    public static final int HANDLERTYPE_6 = 6;
 
 
 }

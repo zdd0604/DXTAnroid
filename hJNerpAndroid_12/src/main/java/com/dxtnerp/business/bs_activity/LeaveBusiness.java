@@ -26,7 +26,7 @@ import com.dxtnerp.model.md_ctlm.Ctlm1345;
 import com.dxtnerp.model.md_ctlm.Ej1345;
 import com.dxtnerp.net.HttpClientManager;
 import com.dxtnerp.util.StringUtil;
-import com.dxtnerp.util.ZipUtils;
+import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.myscom.FileUtils;
 import com.dxtnerp.widget.ClearEditText;
 import com.lidroid.xutils.util.LogUtils;

@@ -561,7 +561,7 @@
 
     <!-- 工作日志左侧标题固定宽度  -->
     <style name="Item_LinearLayout_TVLeftTieleStyle2">
-        <item name="android:layout_width">@dimen/size_65</item>
+        <item name="android:layout_width">@dimen/size_80</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:textSize">@dimen/font_size_16</item>
         <item name="android:textColor">@color/black</item>

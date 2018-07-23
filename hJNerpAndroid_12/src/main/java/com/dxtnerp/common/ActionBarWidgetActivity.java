@@ -217,6 +217,18 @@ public class ActionBarWidgetActivity extends ActivitySupport {
     }
 
     /**
+     * 带数据跳转
+     * @param to
+     * @param bundle
+     * @param ac_type
+     */
+    public void intentActivity(Class to, Bundle bundle,int ac_type) {
+        Intent intent = new Intent(mContext, to);
+        intent.putExtras(bundle);
+        startActivityForResult(intent, ac_type);
+    }
+
+    /**
      * 提交失败提示框
      *
      * @param content

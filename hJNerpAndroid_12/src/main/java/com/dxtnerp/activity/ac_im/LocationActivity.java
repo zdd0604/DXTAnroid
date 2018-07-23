@@ -41,9 +41,9 @@ import com.dxtnerp.adapter.ad_im.LocationAdatper;
 import com.dxtnerp.common.ActivitySupport;
 import com.dxtnerp.common.Constant;
 import com.dxtnerp.model.LocationInfo;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.Log;
-import com.dxtnerp.util.imageCompressUtil;
+import com.dxtnerp.util.img.imageCompressUtil;
 
 import org.apache.cordova.LOG;
 

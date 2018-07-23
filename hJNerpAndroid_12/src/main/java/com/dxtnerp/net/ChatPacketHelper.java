@@ -15,7 +15,7 @@ import com.dxtnerp.model.FriendInfo;
 import com.dxtnerp.model.GroupInfo;
 import com.dxtnerp.model.TempContactInfo;
 import com.dxtnerp.model.UserInfo;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.SharePreferenceUtil;
 
 /**

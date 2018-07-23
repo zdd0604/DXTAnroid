@@ -136,8 +136,6 @@ public interface IActivitySupport {
 	/**
 	 * 
 	 * 获取用户配置.
-	 * 
-	 * @param loginConfig
 	 * @author 李庆义
 	 * @update 2012-7-6 上午9:59:49
 	 */

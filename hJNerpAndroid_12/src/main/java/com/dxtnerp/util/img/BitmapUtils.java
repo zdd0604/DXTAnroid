@@ -1,4 +1,4 @@
-package com.dxtnerp.util;
+package com.dxtnerp.util.img;
 
 import android.content.Context;
 import android.content.res.Resources;

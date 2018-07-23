@@ -53,6 +53,7 @@ import com.dxtnerp.net.IQ;
 import com.dxtnerp.service.IMChatService;
 import com.dxtnerp.service.WebSocketService;
 import com.dxtnerp.util.SharePreferenceUtil;
+import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.myscom.StringUtils;
 import com.dxtnerp.widget.MyToast;
 import com.dxtnerp.widget.dialog.WaitDialog;
@@ -103,15 +104,17 @@ public class ActivitySupport extends ActionBarActivity implements
     public boolean isPsions = false;
 
     private int mLocationTime = 10000;//获取地址的时间间隔
-    private LocationClient mLocationClient;
-    private ActivitySupport.MyLocationListener myLocationListener;
+    protected LocationClient mLocationClient;
+    protected MyLocationListener myLocationListener;
+    public static OnMyLocationLitener onMyLocationLitener;
+    //地理位置
+    protected String myLocation = "";
     protected double mLatitude = 0.00;
     protected double mLongitude = 0.00;
 
-
-    /**
-     * @author haijian 增加变量判断键盘是否收回
-     */
+    public static void setOnMyLocationLitener(OnMyLocationLitener onMyLocationLitener) {
+        ActivitySupport.onMyLocationLitener = onMyLocationLitener;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,35 +131,22 @@ public class ActivitySupport extends ActionBarActivity implements
         waitDialogSupport = new WaitDialog(context);
         waitDialogRectangle = new WaitDialogRectangle(context);
 
-//        getLocationInfo();
-
     }
 
     /**
-     * 获取Editext内容
-     *
-     * @param editText
-     * @return
+     * 定位成功回调接口
      */
-    public static String getEdVaule(EditText editText) {
-        return editText.getText().toString().trim();
+    public interface OnMyLocationLitener {
+        void OnMyLocationLitener(String myLocation, double mLatitude, double mLongitude);
     }
-    /**
-     * TextView
-     *
-     * @param textView
-     * @return
-     */
-    public static String getTvVaule(TextView textView) {
-        return textView.getText().toString().trim();
-    }
+
 
     /**
      * 獲取定位
      */
-    public void getLocationInfo() {
+    protected void getLocationInfo() {
         mLocationClient = new LocationClient(this);
-        myLocationListener = new ActivitySupport.MyLocationListener();
+        myLocationListener = new MyLocationListener();
         mLocationClient.registerLocationListener(myLocationListener);
         LocationClientOption option = new LocationClientOption();
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
@@ -165,23 +155,27 @@ public class ActivitySupport extends ActionBarActivity implements
         option.setOpenGps(true);
         option.setScanSpan(mLocationTime);
         mLocationClient.setLocOption(option);
+        //开启定位
+        mLocationClient.start();
     }
 
-    private class MyLocationListener implements BDLocationListener {
+    public class MyLocationListener implements BDLocationListener {
         @Override
         public void onReceiveLocation(BDLocation bdLocation) {
             // 地理位置信息返回结果
+            myLocation = bdLocation.getAddrStr();
             mLatitude = bdLocation.getLatitude();
             mLongitude = bdLocation.getLongitude();
+            if (onMyLocationLitener != null)
+                onMyLocationLitener.OnMyLocationLitener(myLocation, mLatitude, mLongitude);
+            Log.d("show",myLocation);
         }
     }
-
 
     @Override
     protected void onStart() {
         super.onStart();
-        if (mLocationClient != null)
-            mLocationClient.start();
+
     }
 
     @Override
@@ -222,7 +216,7 @@ public class ActivitySupport extends ActionBarActivity implements
             isFromBackToFront = false;
         }
 
-        if (mLocationClient != null &&mLocationClient.isStarted()) {
+        if (mLocationClient != null && mLocationClient.isStarted()) {
             mLocationClient.stop();
         }
     }
@@ -493,16 +487,16 @@ public class ActivitySupport extends ActionBarActivity implements
                             String contentText, Class activity, String from) {
         /*
          * 创建新的Intent，作为点击Notification留言条时， 会运行的Activity
-		 */
+         */
         Intent notifyIntent = new Intent(this, activity);
         notifyIntent.putExtra("to", from);
         // notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-		/* 创建PendingIntent作为设置递延运行的Activity */
+        /* 创建PendingIntent作为设置递延运行的Activity */
         PendingIntent appIntent = PendingIntent.getActivity(this, 0,
                 notifyIntent, 0);
 
-		/* 创建Notication，并设置相关参数 */
+        /* 创建Notication，并设置相关参数 */
 //        Notification myNoti = new Notification();
 //		// 点击自动消失
 //		myNoti.flags = Notification.FLAG_AUTO_CANCEL;
@@ -961,7 +955,6 @@ public class ActivitySupport extends ActionBarActivity implements
     }
 
 
-
     /**
      * 长toast
      *
@@ -998,7 +991,7 @@ public class ActivitySupport extends ActionBarActivity implements
     public void logShow(String content) {
         StackTraceElement ste = new Throwable().getStackTrace()[1];
         if (Constant.IS_LOG_SHOW_VIEW)
-            Log.e("MZ", "文件名称："+getClass().getSimpleName()
+            Log.e("MZ", "文件名称：" + getClass().getSimpleName()
                     + "，行号：" + ste.getLineNumber()
                     + "，内容：" + content);
     }
@@ -1014,6 +1007,24 @@ public class ActivitySupport extends ActionBarActivity implements
         return editText.getText().toString().trim();
     }
 
+    /**
+     * 获取Editext内容
+     *
+     * @param editText
+     * @return
+     */
+    public static String getEdVaule(EditText editText) {
+        return editText.getText().toString().trim();
+    }
 
+    /**
+     * TextView
+     *
+     * @param textView
+     * @return
+     */
+    public static String getTvVaule(TextView textView) {
+        return textView.getText().toString().trim();
+    }
 
 }

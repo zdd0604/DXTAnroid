@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dgtdech_action"
+        android:scrollbars="none">
+
+        <LinearLayout style="@style/Item_LinearLayout_VerticalStyle">
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_marginTop="@dimen/size_1">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title1" />
+
+                <TextView
+                    android:id="@+id/bs_ConsumSpende_input1"
+                    style="@style/Item_LinearLayout_TvRightTitleStyle" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title2" />
+
+
+                <TextView
+                    android:id="@+id/bs_ConsumSpende_input2"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_ConsumSpende_Hint2" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_ConsumSpende_title3"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title3" />
+
+                <TextView
+                    android:id="@+id/bs_ConsumSpende_input3"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_ConsumSpende_Hint3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_1"
+                android:minHeight="@dimen/size_110">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title4" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_ConsumSpende_input4"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_ConsumSpende_Hint4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title5" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_ConsumSpende_input5"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_ConsumSpende_Hint5"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title6" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_ConsumSpende_input6"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_ConsumSpende_Hint6"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title7" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_ConsumSpende_input7"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_ConsumSpende_Hint7"
+                    android:inputType="numberDecimal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_ConsumSpende_Title8" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_ConsumSpende_input8"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_ConsumSpende_Hint8"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

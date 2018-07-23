@@ -10,17 +10,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.dxtnerp.R;
-import com.dxtnerp.util.BitmapUtils;
+import com.dxtnerp.util.img.BitmapUtils;
+import com.dxtnerp.util.StringUtil;
 
 /**
  * @author zhangdongdong
- *         返回上级菜单、中间标题、右边标题(默认隐藏)
+ * 返回上级菜单、中间标题、右边标题(默认隐藏)
  */
-public class ActivityBaseHeader extends ActivitySupport{
+public class ActivityBaseHeader extends ActionBarWidgetActivity {
     Toolbar base_toolbar;
-    TextView base_leftTv;
-    TextView base_centerTv;
-    TextView base_rightTv;
+    protected TextView base_leftTv;
+    protected TextView base_centerTv;
+    protected TextView base_rightTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,9 @@ public class ActivityBaseHeader extends ActivitySupport{
 
         //设置返回按钮图片
         setLeftTvImg(R.drawable.module_tolbar_backup);
+        //设置标题
+        if (StringUtil.isStrTrue(Constant.Clicked_xml_nameModel))
+            setBaseCenterTv(Constant.Clicked_xml_nameModel);
 
         base_leftTv.setOnClickListener(onClickListener);
         base_rightTv.setOnClickListener(onClickListener);
@@ -64,35 +68,43 @@ public class ActivityBaseHeader extends ActivitySupport{
     private View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-           switch (v.getId()){
-               case R.id.base_leftTv:
-                   onLeftClick();
-                   break;
-               case R.id.base_rightTv:
-                   onRightClick();
-                   break;
-           }
+            switch (v.getId()) {
+                case R.id.base_leftTv:
+                    onLeftClick();
+                    break;
+                case R.id.base_rightTv:
+                    onRightClick();
+                    break;
+            }
         }
     };
 
 
     /**
      * 设置资源文件的图片
+     *
      * @param imgID
      */
-    protected void setTolbarResourcesDw(int imgID){
-        base_toolbar.setBackground(BitmapUtils.getResourcesDw(context,imgID));
+    protected void setTolbarResourcesDw(int imgID) {
+        base_toolbar.setBackground(BitmapUtils.getResourcesDw(context, imgID));
     }
-
 
     /**
      * 设置左边标题 图片适用于返回
+     *
      * @param imgID
      */
     protected void setLeftTvImg(int imgID) {
         Drawable drawable = getResources().getDrawable(imgID);
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight()); //设置边界
         base_leftTv.setCompoundDrawables(drawable, null, null, null);//画在右边
+    }
+
+    /**
+     * 左边标题的点击事件
+     */
+    protected void onLeftClick() {
+        finish();
     }
 
     /**
@@ -108,12 +120,22 @@ public class ActivityBaseHeader extends ActivitySupport{
         }
     }
 
+    /**
+     * 设置右边标题
+     */
+    protected void setBase_rightTv(String tvText) {
+        if (tvText != null) {
+            if (base_rightTv != null) {
+                base_rightTv.setText(tvText);
+            }
+        }
+    }
 
     /**
-     * 左边标题的点击事件
+     * 设置右边标题显示与隐藏
      */
-    protected void onLeftClick() {
-        finish();
+    protected void setBase_rightTvType(int tvType) {
+        base_rightTv.setVisibility(tvType);
     }
 
     /**

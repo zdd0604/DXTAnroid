@@ -46,7 +46,7 @@ import com.dxtnerp.manager.HjActivityManager;
 import com.dxtnerp.model.md_business.BusinessData;
 import com.dxtnerp.model.md_business.BusinessParam;
 import com.dxtnerp.model.md_ctlm.Ctlm1347;
-import com.dxtnerp.util.ImageFileHelper;
+import com.dxtnerp.util.img.ImageFileHelper;
 import com.dxtnerp.util.SharePreferenceUtil;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.ToastUtil;

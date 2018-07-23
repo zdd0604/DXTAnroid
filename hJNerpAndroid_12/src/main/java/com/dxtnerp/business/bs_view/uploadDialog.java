@@ -34,7 +34,7 @@ import com.dxtnerp.net.HttpClientManager;
 import com.dxtnerp.net.HttpClientManager.HttpResponseHandler;
 import com.dxtnerp.util.Log;
 import com.dxtnerp.util.StringUtil;
-import com.dxtnerp.util.ZipUtils;
+import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.myscom.FileUtils;
 import com.dxtnerp.R;
 

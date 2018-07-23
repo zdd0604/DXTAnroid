@@ -31,7 +31,7 @@ import com.dxtnerp.model.DisCardFageDataClass;
 import com.dxtnerp.model.HJSender;
 import com.dxtnerp.model.IDComConfig;
 import com.dxtnerp.model.md_business.BusinessParam;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.DomXmlParse;
 import com.dxtnerp.util.LuaLoadScript;
 import com.dxtnerp.util.StringUtil;

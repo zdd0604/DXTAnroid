@@ -11,7 +11,7 @@ import com.dxtnerp.common.EapApplication;
 import com.dxtnerp.net.HttpClientManager;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.ToastUtil;
-import com.dxtnerp.util.ZipUtils;
+import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.myscom.FileUtils;
 import com.dxtnerp.widget.dialog.WaitDialogRectangle;
 import com.lidroid.xutils.util.LogUtils;
@@ -49,7 +49,6 @@ public class HjUpload {
     public void onhjupload(JSONArray args) {
 //        int resultint = 0;
         // 上传的代码
-
         if (waitDialogRectangle != null && waitDialogRectangle.isShowing()) {
             waitDialogRectangle.dismiss();
         }
@@ -65,6 +64,7 @@ public class HjUpload {
                 String file_list = obj.getString(DATASET_VALUE);
                 String uuid = StringUtil.getMyUUID();
                 File file = new File(Constant.TEMP_DIR, uuid + ".txt");
+
                 if (!"".equals(file_list)) {
                     for (String name : file_list.split(",")) {
                         files.add(new File("file://"+ Constant.HJPHOTO_CACHE_DIR + name));

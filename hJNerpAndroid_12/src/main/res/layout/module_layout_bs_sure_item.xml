@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bs_sure_item_ll"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/size_1"
+    android:background="@color/white"
+    android:layout_height="@dimen/size_45"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/bs_sure_item_ck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:clickable="false"
+        android:layout_marginLeft="@dimen/size_10"/>
+
+    <TextView
+        android:id="@+id/bs_sure_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/size_10"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:textSize="@dimen/font_size_16"
+        tools:text="测试数据" />
+
+</LinearLayout>

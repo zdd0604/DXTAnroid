@@ -47,7 +47,7 @@ import com.dxtnerp.dao.OtherBaseDao;
 import com.dxtnerp.model.IDComConfig;
 import com.dxtnerp.model.md_ctlm.Ctlm1108;
 import com.dxtnerp.util.StringUtil;
-import com.dxtnerp.util.ZipUtils;
+import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.businessutils.BuinessImgUtils;
 import com.dxtnerp.util.businessutils.BusinessFileUtils;
 import com.dxtnerp.util.businessutils.BusinessTimeUtils;
@@ -185,7 +185,6 @@ public class BusinessEJLocation extends ActivityBaseHeader implements View.OnCli
     }
 
     private void initView() {
-        setBaseCenterTv(getString(R.string.buess_Title_CenterTitle));
         sign_img_up.setOnClickListener(this);
         sign_img_down.setOnClickListener(this);
         ej_photo_add.setOnClickListener(this);

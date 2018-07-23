@@ -15,7 +15,7 @@ import com.dxtnerp.db.SQLiteTemplate.RowMapper;
 import com.dxtnerp.model.md_im.ChatHisBean;
 import com.dxtnerp.model.IMMessage;
 import com.dxtnerp.model.NoticeInfo;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.StringUtil;
 
 /**

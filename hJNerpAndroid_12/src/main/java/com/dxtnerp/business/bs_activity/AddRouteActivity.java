@@ -20,7 +20,7 @@ import com.baidu.location.BDLocation;
 import com.dxtnerp.R;
 import com.dxtnerp.activity.CaptureActivity;
 import com.dxtnerp.common.ActivitySupport;
-import com.dxtnerp.util.BDLocationUtil;
+import com.dxtnerp.util.map.BDLocationUtil;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.ToastUtil;
 

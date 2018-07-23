@@ -20,7 +20,7 @@ import com.dxtnerp.model.UserInfo;
 import com.dxtnerp.model.md_work.WorkflowListInfo;
 import com.dxtnerp.net.ChatConstants;
 import com.dxtnerp.net.ChatPacketHelper;
-import com.dxtnerp.util.ImageLoaderHelper;
+import com.dxtnerp.util.img.ImageLoaderHelper;
 import com.dxtnerp.util.SharePreferenceUtil;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.R;

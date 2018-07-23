@@ -1,4 +1,4 @@
-package com.dxtnerp.util;
+package com.dxtnerp.util.density;
 
 import android.content.Context;
 

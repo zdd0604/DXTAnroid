@@ -16,7 +16,7 @@ import com.dxtnerp.activity.LoginActivity;
 import com.dxtnerp.db.DataBaseHelper;
 import com.dxtnerp.model.NearBuild;
 import com.dxtnerp.net.HttpClientManager;
-import com.dxtnerp.util.ImageLoaderHelper;
+import com.dxtnerp.util.img.ImageLoaderHelper;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.cache.CacheEntity;
 import com.lzy.okgo.cache.CacheMode;

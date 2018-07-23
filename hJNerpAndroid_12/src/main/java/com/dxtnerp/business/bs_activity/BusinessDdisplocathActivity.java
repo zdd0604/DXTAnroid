@@ -40,7 +40,7 @@ import com.dxtnerp.net.HttpClientManager;
 import com.dxtnerp.net.HttpClientManager.HttpResponseHandler;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.ToastUtil;
-import com.dxtnerp.util.ZipUtils;
+import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.myscom.FileUtils;
 import com.dxtnerp.widget.HorizontalListView;
 import com.dxtnerp.widget.dialog.WaitDialogRectangle;

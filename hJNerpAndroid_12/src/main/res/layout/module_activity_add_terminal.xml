@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/actionbar_title_bg1"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0"
+        android:layout_below="@id/binput_action"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            style="@style/Item_LinearLayout_VerticalStyle"
+            android:background="@null">
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title1" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_1"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_2"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title2" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_2"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_3"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title3" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_3"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_4"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title4" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_4"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_5"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title5" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_5"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title6" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_6"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_7"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title7" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_7"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_8"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title8" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_8"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_addterminal_title_9"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title9" />
+
+                <TextView
+                    android:id="@+id/bs_addterminal_input_9"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_AddTerminal_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title10" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_10"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title11" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_11"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title12" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_12"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    android:id="@+id/bs_AddTerminal_TitleTv13"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title13"
+                    android:textColor="@color/actionbar_title_tcolor" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_13"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_AddTerminal_Title14" />
+
+                <com.dxtnerp.widget.ClearEditText
+                    android:id="@+id/bs_addterminal_input_14"
+                    style="@style/Item_LinearLayout_EdRightTitleStyle"
+                    android:hint="@string/bs_AddTerminal_Hint1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -63,7 +63,7 @@ import com.dxtnerp.net.HttpClientBuilder;
 import com.dxtnerp.net.HttpClientBuilder.HttpClientParam;
 import com.dxtnerp.net.HttpClientManager;
 import com.dxtnerp.net.HttpClientManager.HttpResponseHandler;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.SharePreferenceUtil;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.businessutils.MyOrientationListener;

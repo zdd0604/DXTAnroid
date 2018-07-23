@@ -7,7 +7,7 @@ import com.dxtnerp.business.bs_view.StartViewInfo;
 import com.dxtnerp.business.bs_view.WidgetClass;
 import com.dxtnerp.model.md_ctlm.Ctlm1347;
 import com.dxtnerp.model.UserInfo;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.StringUtil;
 
 public class BusinessDataSaveHelper {

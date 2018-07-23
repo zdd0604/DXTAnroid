@@ -306,10 +306,62 @@
     <string name="pfItem_Title_perfDecSmark">绩效总分</string>
     <string name="pfItem_Hint_perfDecSmark">请填写绩效总分（必填）</string>
 
-    <!-- 业务 -->
+    <!-- 业务模块名称-->
     <string name="bFragment_Title_ViewGroup1">拜访业务</string>
     <string name="bFragment_Title_ViewGroup2">工作业务</string>
     <string name="bFragment_Title_ViewGroup3">查询业务</string>
     <string name="bFragment_Title_ViewGroup4">绩效管理</string>
+
+    <!-- 新增终端-->
+    <string name="bs_AddTerminal_Title1">终端名称</string>
+    <string name="bs_AddTerminal_Title2">终端类型</string>
+    <string name="bs_AddTerminal_Title3">所属部门</string>
+    <string name="bs_AddTerminal_Title4">终端区域</string>
+    <string name="bs_AddTerminal_Title5">担当经销商</string>
+    <string name="bs_AddTerminal_Title6">担当业务员</string>
+    <string name="bs_AddTerminal_Title7">终端级别</string>
+    <string name="bs_AddTerminal_Title8">终端属性</string>
+    <string name="bs_AddTerminal_Title9">是否合作</string>
+    <string name="bs_AddTerminal_Title10">联系人</string>
+    <string name="bs_AddTerminal_Title11">联系电话</string>
+    <string name="bs_AddTerminal_Title12">详细地址</string>
+    <string name="bs_AddTerminal_Title13">获取位置</string>
+    <string name="bs_AddTerminal_Title14">录入人</string>
+    <string name="bs_AddTerminal_Hint1">请输入</string>
+    <string name="bs_AddTerminal_Hint2">请选择</string>
+    <string name="bs_AddTerminal_Hint3">当前定位</string>
+
+    <string name="toast_Error_Hint1">请输入终端名称</string>
+    <string name="toast_Error_Hint2">请选择终端类型</string>
+    <string name="toast_Error_Hint3">请选择所属部门</string>
+    <string name="toast_Error_Hint4">请选择终端区域</string>
+    <string name="toast_Error_Hint5">请选择担当经销商</string>
+    <string name="toast_Error_Hint7">请选择终端级别</string>
+    <string name="toast_Error_Hint8">请选择终端属性</string>
+    <string name="toast_Error_Hint9">请选择请选择</string>
+    <string name="toast_Error_Hint10">请输入联系人</string>
+    <string name="toast_Error_Hint11">请输入联系电话</string>
+    <string name="toast_Error_Hint12">请输入详细地址</string>
+    <string name="toast_Error_Hint13">地理位置获取失败</string>
+
+
+    <!-- 费用报销单 -->
+    <string name="bs_ConsumSpende_Title1">报销单号</string>
+    <string name="bs_ConsumSpende_Title2">申请日期</string>
+    <string name="bs_ConsumSpende_Title3">费用类型</string>
+    <string name="bs_ConsumSpende_Title4">摘要</string>
+    <string name="bs_ConsumSpende_Title5">预算金额</string>
+    <string name="bs_ConsumSpende_Title6">报销金额</string>
+    <string name="bs_ConsumSpende_Title7">附件张数</string>
+    <string name="bs_ConsumSpende_Title8">报销人</string>
+
+    <string name="bs_ConsumSpende_Hint1">请输入报销单号</string>
+    <string name="bs_ConsumSpende_Hint2">请选择申请日期</string>
+    <string name="bs_ConsumSpende_Hint3">请选择费用类型</string>
+    <string name="bs_ConsumSpende_Hint4">请输入摘要</string>
+    <string name="bs_ConsumSpende_Hint5">请输入预算金额</string>
+    <string name="bs_ConsumSpende_Hint6">请输入报销金额</string>
+    <string name="bs_ConsumSpende_Hint7">请输入附件张数</string>
+    <string name="bs_ConsumSpende_Hint8">请输入报销人</string>
 
 </resources>

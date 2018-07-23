@@ -6,7 +6,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.dxtnerp.common.Constant;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 
 public class IMMessage implements Parcelable, Comparable<IMMessage> {
 	public static final String IMMESSAGE_KEY = "immessage.key";

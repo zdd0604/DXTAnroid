@@ -20,6 +20,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.dxtnerp.business.bs_work.AddTerminalActivity;
+import com.dxtnerp.business.bs_work.ConsumSpendeActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.dxtnerp.activity.SetActivity;
@@ -148,7 +150,7 @@ public class BusinessFragment<Divider> extends CommonFragment {
                     return;
                 }
 
-                //原生以及HTML
+                //界面跳转判断
                 fragmentIntent(fragment);
 
             } else if (DOWNLOAD_XML_ERROR.equalsIgnoreCase(flag)) {
@@ -156,7 +158,7 @@ public class BusinessFragment<Divider> extends CommonFragment {
                     myToastShow(context, "下载模板错误，请重新尝试。");
                     return;
                 }
-                fragmentFailIntent(fragment);
+                logShow("模版下载出错！");
             }
         }
     }
@@ -208,8 +210,11 @@ public class BusinessFragment<Divider> extends CommonFragment {
      */
     private void fragmentIntent(Fragment fragment) {
         Class fromClass = null;
+        //设置模版名称
+        Constant.Clicked_xml_nameModel = clicked_xml_nameModel;
 
-        logShow("XML模板名称：" + clicked_id_model);
+        logShow("XML模板名称：" + Constant.Clicked_xml_nameModel);
+
         if (!BusinessQueryDao.getUserInfo(context)){
             intent = new Intent(fragment.getActivity(), SetActivity.class);
         } else
@@ -231,11 +236,11 @@ public class BusinessFragment<Divider> extends CommonFragment {
         } else
             //新增终端
         if (clicked_id_model.equals(Constant.nterminalhtml)){
-
+            fromClass = AddTerminalActivity.class;
         } else
             //报销单
         if (clicked_id_model.equals(Constant.dfeeothhtml)){
-
+            fromClass = ConsumSpendeActivity.class;
         } else
             //终端修改
         if (clicked_id_model.equals(Constant.mterminalhtml)){
@@ -291,52 +296,6 @@ public class BusinessFragment<Divider> extends CommonFragment {
         }
     }
 
-    /**
-     * 判断模板是否存在
-     *
-     * @param fragment
-     */
-    private static void fragmentFailIntent(Fragment fragment) {
-        if (clicked_id_model.equals(Constant.ddisplocatphohtml)) {
-            if (BusinessQueryDao.getUserInfo(context)) {
-                intent = new Intent(fragment.getActivity(), BusinessDdisplocathActivity.class);
-            } else {
-                intent = new Intent(fragment.getActivity(), SetActivity.class);
-            }
-        } else if (clicked_id_model.equals(Constant.ddisplocatEJhtml)) {
-            intent = new Intent(fragment.getActivity(), BusinessEJLocation.class);
-        } else if (clicked_id_model.equals(Constant.dgtdouthtml) ||
-                clicked_id_model.equals(Constant.dgtdothtml) ||
-                clicked_id_model.equals(Constant.dgtdvathtml) ||
-                clicked_id_model.equals(Constant.dgtdabnhtml)) {
-            intent = new Intent(fragment.getActivity(), TravelActivityNew.class);
-        } else if (clicked_id_model.equals(Constant.dkpipostinputhtml)) {
-            if (BusinessQueryDao.getUserInfo(context)) {
-                intent = new Intent(fragment.getActivity(), BusinessPerformanceArrayList.class);
-            } else {
-                intent = new Intent(fragment.getActivity(), SetActivity.class);
-            }
-        } else if (clicked_id_model.equals(Constant.dgtdrechtml)) {
-            if (BusinessQueryDao.getUserInfo(context)) {
-                intent = new Intent(fragment.getActivity(), BusinessDgtdrechtml.class);
-            } else {
-                intent = new Intent(fragment.getActivity(), SetActivity.class);
-            }
-        } else if (clicked_id_model.equals(Constant.dkpipostreviewhtml) ||
-                clicked_id_model.equals(Constant.dkpipostconfimhtml) ||
-                clicked_id_model.equals(Constant.dkpipostreadmehtml) ||
-                clicked_id_model.equals(Constant.dkpipostratehtml) ||
-                clicked_id_model.equals(Constant.dkpipostidentificatehtml)) {
-            if (BusinessQueryDao.getUserInfo(context)) {
-                intent = new Intent(fragment.getActivity(), BusinessBillsActivity.class);
-            } else {
-                intent = new Intent(fragment.getActivity(), SetActivity.class);
-            }
-            fragment.startActivity(intent);
-        } else {
-            new MyToast(context, "下载模板错误，请重新尝试。");
-        }
-    }
 
     private void dogridview(final ArrayList<MenuContent> listCurrent, GridView gridView) {
         adapter = new BusinessGridViewAdapter(getActivity(), listCurrent);

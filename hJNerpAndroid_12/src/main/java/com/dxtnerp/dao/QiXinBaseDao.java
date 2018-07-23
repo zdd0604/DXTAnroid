@@ -25,7 +25,7 @@ import com.dxtnerp.model.GroupInfo;
 import com.dxtnerp.model.UserInfo;
 import com.dxtnerp.model.VerfifyFriendInfo;
 import com.dxtnerp.net.ChatConstants;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.SharePreferenceUtil;
 
 /**

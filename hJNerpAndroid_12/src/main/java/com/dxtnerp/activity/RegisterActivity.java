@@ -15,7 +15,7 @@ import com.dxtnerp.business.bs_callback.BRegisterCallBack;
 import com.dxtnerp.common.ActionBarWidgetActivity;
 import com.dxtnerp.dao.OtherBaseDao;
 import com.dxtnerp.model.md_business.BaseData;
-import com.dxtnerp.util.DateUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.ToastUtil;
 import com.dxtnerp.widget.ClearEditText;
 import com.dxtnerp.widget.dialog.WaitDialogRectangle;
