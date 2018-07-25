@@ -381,6 +381,13 @@
         <item name="android:background">@color/ViewBg</item>
     </style>
 
+    <!-- Item分割线  -->
+    <style name="Item_View_DividerHeight3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/size_1</item>
+        <item name="android:background">@color/ActivityBgColor</item>
+    </style>
+
 
     <!-- 工作日志左侧标题  -->
     <style name="Item_LinearLayout_TVLeftTieleStyle">
@@ -583,6 +590,21 @@
         <item name="android:layout_weight">1</item>
     </style>
 
+    <!--(默认单行一个textview)-->
+    <style name="Item_LinearLayout_TvTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_size_15</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingTop">@dimen/size_5</item>
+        <item name="android:paddingBottom">@dimen/size_5</item>
+        <item name="android:paddingLeft">@dimen/size_10</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">@dimen/size_10</item>
+        <item name="android:layout_marginBottom">@dimen/size_1</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
     <!--(默认单行一个textview) TextView跳转页面的图片框 向右的箭头-->
     <style name="Item_LinearLayout_TvTitleImgStyle">
         <item name="android:layout_width">match_parent</item>
@@ -609,6 +631,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingRight">@dimen/size_10</item>
     </style>
+
 
     <!-- 右侧TextView跳转页面的图片框 向下的箭头 -->
     <style name="Item_LinearLayout_TvRightTitleImgDownStyle">
@@ -676,6 +699,7 @@
         <item name="android:paddingLeft">@dimen/size_10</item>
         <item name="android:textSize">@dimen/font_size_16</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:imeOptions">actionSearch</item>
     </style>
 
     <!-- 修改个人信息界面 -->
@@ -910,7 +934,6 @@
         <item name="android:background">@drawable/login_select_bg</item>
         <item name="android:layout_margin">@dimen/size_1</item>
     </style>
-
 
 
     <!-- +++++++++++++++++++ 公共标题的风格 +++++++++++++++++++ -->

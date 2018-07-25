@@ -1,18 +1,16 @@
 package com.dxtnerp.business.bs_work;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.dxtnerp.R;
-import com.dxtnerp.adapter.ad_work.Bs_SureRLAdapter;
+import com.dxtnerp.adapter.bs_work.Bs_SureRLAdapter;
 import com.dxtnerp.common.ActivityBaseHeader;
 import com.dxtnerp.common.Constant;
 import com.dxtnerp.model.bs_work.TextModule;
 import com.dxtnerp.model.bs_work.TextModule2;
-import com.dxtnerp.widget.rlview.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,8 +25,6 @@ import butterknife.ButterKnife;
  */
 public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAdapter.OnItemClickLitener {
 
-    List<TextModule> list;
-    List<TextModule2> list2;
     @BindView(R.id.bs_sure_rel)
     RecyclerView bs_sure_rel;
 
@@ -38,6 +34,10 @@ public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAd
     private int vernier;
     //根据此数据类型判断加载那个实体类
     private int intDataType;
+
+    //测试数据
+    List<TextModule> list;
+    List<TextModule2> list2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +52,7 @@ public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAd
     private void initView() {
         Bs_SureRLAdapter.setOnItemClickLitener(this);
         base_rightTv.setVisibility(View.VISIBLE);
-
+        base_rightTv.setText(getString(R.string.action_right_content_sure));
         base_centerTv.setText(getIntent().getStringExtra(Constant.OperationName));
 
         intDataType = getIntent().getIntExtra(Constant.OperationID,0);
@@ -60,7 +60,7 @@ public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAd
         setdata();
         setdata2();
 
-        base_rightTv.setText(getString(R.string.action_right_content_sure));
+
         bs_sure_rel.setLayoutManager(new LinearLayoutManager(this));
         bs_sureRLAdapter = new Bs_SureRLAdapter(context,intDataType,list,list2);
         bs_sure_rel.setAdapter(bs_sureRLAdapter);
@@ -71,10 +71,10 @@ public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAd
         super.onRightClick();
 
         switch (intDataType) {
-            case 2:
+            case Constant.OperationIDNumb2:
                 Constant.textModule = list.get(vernier);
                 break;
-            case 3:
+            case Constant.OperationIDNumb3:
                 Constant.textModule2 = list2.get(vernier);
                 break;
         }
@@ -123,7 +123,6 @@ public class BillsSureActivity extends ActivityBaseHeader implements Bs_SureRLAd
         list2.add(new TextModule2("67","双创67"));
 
     }
-
 
     @Override
     public void onItemClick(int position) {

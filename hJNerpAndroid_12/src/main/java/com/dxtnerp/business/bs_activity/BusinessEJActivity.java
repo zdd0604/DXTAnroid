@@ -525,7 +525,7 @@ public class BusinessEJActivity extends ActivitySupport implements
         locath_sign_in.setClickable(false);
         locath_sign_out.setClickable(false);
         // 获取当前时间
-        SimpleDateFormat formatter = new SimpleDateFormat(Constant.SGIN_FORMART);
+        SimpleDateFormat formatter = new SimpleDateFormat(Constant.TIME_yyyy_MM_dd_HH_mm_ss);
         Date curDate = new Date(System.currentTimeMillis());
         sgin_data = formatter.format(curDate);
 

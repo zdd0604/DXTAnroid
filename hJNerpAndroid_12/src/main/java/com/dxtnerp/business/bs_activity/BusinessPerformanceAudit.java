@@ -30,6 +30,7 @@ import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.ToastUtil;
 import com.dxtnerp.util.businessutils.BusinessScore;
 import com.dxtnerp.util.businessutils.BusinessTimeUtils;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.widget.ClearEditText;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.exception.OkGoException;
@@ -788,7 +789,7 @@ public class BusinessPerformanceAudit extends ActionBarWidgetActivity implements
             businessPerformanceColumn.setId_flow("0601");
             businessPerformanceColumn.setId_bflow("");
             businessPerformanceColumn.setDate_audit("1900-01-01 00:00:00");
-            businessPerformanceColumn.setDate_eva(BusinessTimeUtils.getCurrentTime(Constant.NOWTIME));
+            businessPerformanceColumn.setDate_eva(DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss));
 //            String time = conclude_time_et + BusinessTimeUtils.getCurrentTime(Constant.NOWTIME2);
             businessPerformanceColumn.setDate_plan(conclude_time_et);
 //            businessPerformanceColumn.setDate_plan(mainBean.getDate_plan());
@@ -884,8 +885,8 @@ public class BusinessPerformanceAudit extends ActionBarWidgetActivity implements
             businessPerformanceColumn.setId_flow("0601");
             businessPerformanceColumn.setId_bflow("");
             businessPerformanceColumn.setDate_audit("1900-01-01 00:00:00");
-            businessPerformanceColumn.setDate_eva(BusinessTimeUtils.getCurrentTime(Constant.NOWTIME));
-            String time = conclude_time_et + BusinessTimeUtils.getCurrentTime(Constant.NOWTIME2);
+            businessPerformanceColumn.setDate_eva(DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss));
+            String time = conclude_time_et + DateUtil.getCurrentTime(Constant.TIME_HH_mm_ss);
             businessPerformanceColumn.setDate_plan(time);
             businessPerformanceColumn.setDec_cmark(0.00);
             businessPerformanceColumn.setDec_dmark(0.00);

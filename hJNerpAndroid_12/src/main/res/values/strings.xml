@@ -32,6 +32,10 @@
     <string name="net_connect_error">网络连接异常，请稍后重试！</string>
     <string name="net_connect_reconnected">网络连接正常！</string>
 
+    <!-- toast -->
+    <string name="toast_title_noData">无数据</string>
+    <string name="toast_title_plData">请选择数据</string>
+
     <!-- 网络和内存卡提示 -->
     <string name="prompt">提示</string>
     <string name="check_connection">无可用网络连接，请检查网络设置！</string>
@@ -312,6 +316,29 @@
     <string name="bFragment_Title_ViewGroup3">查询业务</string>
     <string name="bFragment_Title_ViewGroup4">绩效管理</string>
 
+
+    <!-- 销售订单 -->
+    <string name="bs_SalesOrderAddl_Title1">订单日期</string>
+    <string name="bs_SalesOrderAddl_Title2">交货日期</string>
+    <string name="bs_SalesOrderAddl_Title3">订单类型</string>
+    <string name="bs_SalesOrderAddl_Title4">开票客户</string>
+    <string name="bs_SalesOrderAddl_Title5">送货地址</string>
+    <string name="bs_SalesOrderAddl_Title6">收货客户</string>
+    <string name="bs_SalesOrderAddl_Title7">录入人</string>
+    <string name="bs_SalesOrderAddl_Title8">产品信息</string>
+    <string name="bs_SalesOrderAddl_Btn1">添加产品</string>
+    <string name="bs_SalesOrderAddl_Btn2">删除产品</string>
+
+    <string name="bs_SalesOrderAddl_Hint1">请选择订单日期</string>
+    <string name="bs_SalesOrderAddl_Hint2">请选择交货日期</string>
+    <string name="bs_SalesOrderAddl_Hint3">请选择订单类型</string>
+    <string name="bs_SalesOrderAddl_Hint4">请选择开票客户</string>
+
+    <string name="bs_SalesOrderAddl_Item_Title1">单位</string>
+    <string name="bs_SalesOrderAddl_Item_Title2">规格</string>
+    <string name="bs_SalesOrderAddl_Item_Title3">产地</string>
+    <string name="bs_SalesOrderAddl_Item_Title4">数量</string>
+
     <!-- 新增终端-->
     <string name="bs_AddTerminal_Title1">终端名称</string>
     <string name="bs_AddTerminal_Title2">终端类型</string>
@@ -363,5 +390,7 @@
     <string name="bs_ConsumSpende_Hint6">请输入报销金额</string>
     <string name="bs_ConsumSpende_Hint7">请输入附件张数</string>
     <string name="bs_ConsumSpende_Hint8">请输入报销人</string>
+
+
 
 </resources>

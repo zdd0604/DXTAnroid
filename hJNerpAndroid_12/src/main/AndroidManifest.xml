@@ -433,6 +433,25 @@
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
+        <!-- 销售订单 -->
+        <activity
+            android:name=".business.bs_work.SalesOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HjNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 销售订单 -> 新增 -->
+        <activity android:name=".business.bs_work.SalesOrderAddActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HjNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <!-- 销售订单 -> 新增 ->查询 -->
+        <activity
+            android:name=".business.bs_work.OrderSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HjNoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"  />
+
+
         <!-- 新增终端 -->
         <activity
             android:name=".business.bs_work.AddTerminalActivity"
@@ -448,10 +467,12 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
 
         <!-- 费用报销单 -->
-        <activity android:name=".business.bs_work.ConsumSpendeActivity"
+        <activity
+            android:name=".business.bs_work.ConsumSpendeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.HjNoActionBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
+
     </application>
 
 </manifest>

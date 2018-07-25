@@ -61,7 +61,7 @@ public class ConsumSpendeActivity extends ActivityBaseHeader implements View.OnC
     }
 
     private void initView(){
-        base_rightTv.setVisibility(View.VISIBLE);
+        setBase_rightTvType(View.VISIBLE);
         setBase_rightTv(getString(R.string.action_right_content_commit));
 
         bs_ConsumSpende_input2.setOnClickListener(this);

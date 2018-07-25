@@ -2,6 +2,7 @@ package com.dxtnerp.common;
 
 import android.os.Environment;
 
+import com.dxtnerp.model.bs_work.ProductInfo;
 import com.dxtnerp.model.bs_work.TextModule;
 import com.dxtnerp.model.bs_work.TextModule2;
 import com.dxtnerp.model.md_ctlm.Ctlm1345;
@@ -174,22 +175,7 @@ public class Constant {
      */
     public static final String PREFENCE_USER_STATE = "prefence_user_state";
     public static final String IS_ONLINE = "is_online";
-    /**
-     * 精确到毫秒
-     */
-    public static final String MS_FORMART = "yyyy-MM-dd HH:mm:ss SSS";
-    /**
-     * 签到时间
-     */
-    public static final String SGIN_FORMART = "yyyy-MM-dd HH:mm:ss";
-    public static final String SGIN_PHOTONAME = "yyyyMMddHHmmss";
-    public static final String TODAY = "yyyy/MM/dd";
-    public static final String NOWTIME = "yyyy-MM-dd HH:mm:ss";
-    public static final String NOWTIME2 = " HH:mm:ss";
-    public static final String TIME_yyyy_MM_dd = "yyyy-MM-dd";
-    public static final String TIME_yyyy_MM_dd_HH_mm_ss = "yyyy-MM-dd HH:mm:ss";
-    public static final String TIME_YYYY = "yyyy";
-    public static final String TIME_MM = "MM";
+
     /*广播，通知imfrgmeng更新ui*/
     public static final String ACTION_HAVENEWMSG_REFLASHUI = "action_havenewmsg_reflashui";
     /*群已被解散*/
@@ -211,6 +197,7 @@ public class Constant {
     public static final String WF_TYPE_OPERATE = "operate"; //发送操作
     public static final String WF_TYPE_CATEGORY = "category"; //工单类型
     public static final String WF_TYPE_ATTACH = "download_attachment";//下载附件
+
     /**
      * 通过
      */
@@ -302,6 +289,29 @@ public class Constant {
     public static final String FILE_SEND_STATUS_FILE_FAIL = "file_send_fail";
     public static final String FILE_SEND_STATUS_FILE_ING = "file_send_ing";
 
+
+    /**
+     * 精确到毫秒
+     */
+    public static final String MS_FORMART = "yyyy-MM-dd HH:mm:ss SSS";
+
+    //时间格式
+    public static final String SGIN_PHOTONAME = "yyyyMMddHHmmss";
+    public static final String TIME_HH_mm_ss = " HH:mm:ss";
+    public static final String TIME_yyyy_MM_dd = "yyyy-MM-dd";
+    public static final String TIME_yyyy_MM_dd_HH_mm_ss = "yyyy-MM-dd HH:mm:ss";
+    public static final String TIME_YYYY = "yyyy";
+    public static final String TIME_MM = "MM";
+
+    //Handler传递
+    public static final int HANDLERTYPE_0 = 0;
+    public static final int HANDLERTYPE_1 = 1;
+    public static final int HANDLERTYPE_2 = 2;
+    public static final int HANDLERTYPE_3 = 3;
+    public static final int HANDLERTYPE_4 = 4;
+    public static final int HANDLERTYPE_5 = 5;
+    public static final int HANDLERTYPE_6 = 6;
+
     /**
      * 业务拍照，照片保存路径
      */
@@ -324,21 +334,9 @@ public class Constant {
 
     public static final String TEMP_DIR = Environment
             .getExternalStorageDirectory().toString() + "/HJNerpPicCache/temp/";
+
     public static final String CHATAUDIO_DIR = Environment
             .getExternalStorageDirectory().toString() + "/HJNerpPicCache/chataudio/";
-    public static final String SGIN_TODAY = "yyyy" + "年" + "MM" + "月" + "dd" + "日";
-    public static final String SGIN_TIME = "HH:mm";
-    public static final String kpiperiod_MM = "MM";
-
-
-    //Handler传递
-    public static final int HANDLERTYPE_0 = 0;
-    public static final int HANDLERTYPE_1 = 1;
-    public static final int HANDLERTYPE_2 = 2;
-    public static final int HANDLERTYPE_3 = 3;
-    public static final int HANDLERTYPE_4 = 4;
-    public static final int HANDLERTYPE_5 = 5;
-    public static final int HANDLERTYPE_6 = 6;
 
     public static Ej1345 ej1345;
     public static EjWadd1345 ejWadd1345;
@@ -385,9 +383,36 @@ public class Constant {
      */
     public static boolean travel;
 
-    //功能ID
+    //功能ID 用来判断那个功能点击进去的
     public static String  OperationID = "OperationID";
-    //功能名称
+
+    //销售订单申请下的订单类型
+    //订单类型
+    public static final int  OperationIDNumb1 = 1;
+
+    //新增终端下的跳转界面搜索的功能ID
+    //终端类型
+    public static final int  OperationIDNumb2 = 2;
+    //所属部门
+    public static final int  OperationIDNumb3 = 3;
+    //终端区域
+    public static final int  OperationIDNumb4 = 4;
+    //担当经销商
+    public static final int  OperationIDNumb5 = 5;
+    //终端级别
+    public static final int  OperationIDNumb7 = 7;
+    //终端属性
+    public static final int  OperationIDNumb8 = 8;
+    //是否合作
+    public static final int  OperationIDNumb9 = 9;
+
+    //销售订单申请下的订单类型
+    //开票客户
+    public static final int  OperationIDNumb10 = 10;
+    //产品信息
+    public static final int  OperationIDNumb11 = 11;
+
+    //功能名称《 订单类型、开票客户、所属部分等等》
     public static String  OperationName = "OperationName";
 
     //模板的名称
@@ -450,11 +475,13 @@ public class Constant {
     //待审单据查询
     public static String  dflagsts = "dflagsts";
 
+
+    //用于保存数据的实体类或者数据集合
     //测试
     public static TextModule textModule;
     public static TextModule2 textModule2;
 
-
-
+    //销售订单申请下的产品信息列表
+    public static List<ProductInfo> productInfos;
 
 }

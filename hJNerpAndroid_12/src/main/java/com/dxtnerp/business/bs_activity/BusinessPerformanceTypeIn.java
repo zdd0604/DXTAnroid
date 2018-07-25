@@ -32,6 +32,7 @@ import com.dxtnerp.model.md_business.BusinessPerformanceInfo;
 import com.dxtnerp.util.Log;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.businessutils.BusinessTimeUtils;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.widget.ClearEditText;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.exception.OkGoException;
@@ -249,11 +250,11 @@ public class BusinessPerformanceTypeIn extends ActionBarWidgetActivity implement
             companyID = myInfo.companyID;
         }
         input_id_clerk.setText(myInfo.username);
-        input_int_year.setText(BusinessTimeUtils.getCurrentTime(Constant.TIME_YYYY));
-        input_conclude_time.setText(BusinessTimeUtils.getCurrentTime(Constant.TIME_yyyy_MM_dd));
+        input_int_year.setText(DateUtil.getCurrentTime(Constant.TIME_YYYY));
+        input_conclude_time.setText(DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd));
         //设置默认当前考评周期
         for (int i = 0; i < monthIntList.size(); i++) {
-            if (monthIntList.get(i).equals(BusinessTimeUtils.getCurrentTime(Constant.TIME_MM))){
+            if (monthIntList.get(i).equals(DateUtil.getCurrentTime(Constant.TIME_MM))){
                 name_kpiperiod_tx.setText(montStList.get(i));
                 Id_kpiperiod = monthIntList.get(i);
             }
@@ -484,7 +485,7 @@ public class BusinessPerformanceTypeIn extends ActionBarWidgetActivity implement
             businessPerformanceColumn.setFlag_sts(flag_sts);
             businessPerformanceColumn.setFlag_psts("");
             businessPerformanceColumn.setDate_audit("1900-01-01 00:00:00");
-            businessPerformanceColumn.setDate_eva(BusinessTimeUtils.getCurrentTime(Constant.NOWTIME));
+            businessPerformanceColumn.setDate_eva(DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss));
 //            String time = conclude_time_et + BusinessTimeUtils.getCurrentTime(Constant.NOWTIME2);
             businessPerformanceColumn.setDate_plan(conclude_time_et);
             Log.v("show", "时间：" + conclude_time_et);
@@ -566,7 +567,7 @@ public class BusinessPerformanceTypeIn extends ActionBarWidgetActivity implement
             businessPerformanceColumn.setFlag_sts(flag_sts);
             businessPerformanceColumn.setFlag_psts("");
             businessPerformanceColumn.setDate_audit("1900-01-01 00:00:00");
-            businessPerformanceColumn.setDate_eva(BusinessTimeUtils.getCurrentTime(Constant.NOWTIME));
+            businessPerformanceColumn.setDate_eva(DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss));
 //            String time = conclude_time_et + BusinessTimeUtils.getCurrentTime(Constant.NOWTIME2);
             businessPerformanceColumn.setDate_plan(conclude_time_et);
             businessPerformanceColumn.setDec_cmark(0.00);

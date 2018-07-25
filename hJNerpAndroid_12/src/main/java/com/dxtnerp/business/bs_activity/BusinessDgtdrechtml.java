@@ -26,6 +26,7 @@ import com.dxtnerp.model.md_ctlm.EjWType1345;
 import com.dxtnerp.model.md_ctlm.EjWadd1345;
 import com.dxtnerp.util.StringUtil;
 import com.dxtnerp.util.businessutils.BusinessTimeUtils;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.widget.ClearEditText;
 import com.lzy.okgo.OkGo;
 
@@ -211,9 +212,9 @@ public class BusinessDgtdrechtml extends ActionBarWidgetActivity implements View
                 Constant.ej1345.getId_user(), Constant.MYUSERINFO.userID,
                 Constant.MYUSERINFO.companyID, date_task, Constant.MYUSERINFO.departmentID,
                 flag_wadd, id_wtype, Constant.id_wproj, dec_wtime, var_wtitle,
-                var_remark, Constant.item_peoject, BusinessTimeUtils.getCurrentTime(Constant.NOWTIME),
-                Integer.valueOf(BusinessTimeUtils.getCurrentTime(Constant.kpiperiod_MM)),
-                Integer.valueOf(BusinessTimeUtils.getCurrentTime(Constant.TIME_YYYY)),
+                var_remark, Constant.item_peoject, DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss),
+                Integer.valueOf(DateUtil.getCurrentTime(Constant.TIME_MM)),
+                Integer.valueOf(DateUtil.getCurrentTime(Constant.TIME_YYYY)),
                 Constant.id_corr);
         getBusinessList(data);
     }

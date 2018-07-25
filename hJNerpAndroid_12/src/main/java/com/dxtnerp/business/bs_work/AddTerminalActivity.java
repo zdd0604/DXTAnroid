@@ -235,42 +235,41 @@ public class AddTerminalActivity extends ActivityBaseHeader implements View.OnCl
 
     @Override
     public void onClick(View v) {
-        Bundle bundle = new Bundle();
         switch (v.getId()) {
             case R.id.bs_addterminal_input_2:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_2));
-                bundle.putInt(Constant.OperationID, 2);
-                intentActivity(BillsSureActivity.class, bundle, 2);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_2));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb2);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb2);
                 break;
             case R.id.bs_addterminal_input_3:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_3));
-                bundle.putInt(Constant.OperationID, 3);
-                intentActivity(BillsSureActivity.class, bundle, 3);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_3));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb3);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb3);
                 break;
             case R.id.bs_addterminal_input_4:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_4));
-                bundle.putInt(Constant.OperationID, 4);
-                intentActivity(BillsSureActivity.class, bundle, 4);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_4));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb4);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb4);
                 break;
             case R.id.bs_addterminal_input_5:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_5));
-                bundle.putInt(Constant.OperationID, 5);
-                intentActivity(BillsSureActivity.class, bundle, 5);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_5));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb5);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb5);
                 break;
             case R.id.bs_addterminal_input_7:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_7));
-                bundle.putInt(Constant.OperationID, 7);
-                intentActivity(BillsSureActivity.class, bundle, 7);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_7));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb7);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb7);
                 break;
             case R.id.bs_addterminal_input_8:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_8));
-                bundle.putInt(Constant.OperationID, 8);
-                intentActivity(BillsSureActivity.class, bundle, 8);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_8));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb8);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb8);
                 break;
             case R.id.bs_addterminal_input_9:
-                bundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_9));
-                bundle.putInt(Constant.OperationID, 9);
-                intentActivity(BillsSureActivity.class, bundle, 9);
+                mBundle.putString(Constant.OperationName, getTvVaule(bs_addterminal_title_9));
+                mBundle.putInt(Constant.OperationID, Constant.OperationIDNumb9);
+                intentActivity(BillsSureActivity.class, mBundle, Constant.OperationIDNumb9);
                 break;
             case R.id.bs_AddTerminal_TitleTv13:
                 waitDialog.show();
@@ -285,19 +284,19 @@ public class AddTerminalActivity extends ActivityBaseHeader implements View.OnCl
         super.onActivityResult(requestCode, resultCode, data);
 
         //实体类需要更改
-        if (requestCode == 2 && resultCode == 100) {
+        if (requestCode == Constant.OperationIDNumb2 && resultCode == 100) {
             bs_addterminal_input_2.setText(Constant.textModule.getName());
-        } else if (requestCode == 3 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb3 && resultCode == 100) {
             bs_addterminal_input_3.setText(Constant.textModule2.getName());
-        } else if (requestCode == 4 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb4 && resultCode == 100) {
             bs_addterminal_input_4.setText(Constant.textModule.getName());
-        } else if (requestCode == 5 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb5 && resultCode == 100) {
             bs_addterminal_input_5.setText(Constant.textModule.getName());
-        } else if (requestCode == 7 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb7 && resultCode == 100) {
             bs_addterminal_input_7.setText(Constant.textModule.getName());
-        } else if (requestCode == 8 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb8 && resultCode == 100) {
             bs_addterminal_input_8.setText(Constant.textModule.getName());
-        } else if (requestCode == 9 && resultCode == 100) {
+        } else if (requestCode == Constant.OperationIDNumb9 && resultCode == 100) {
             bs_addterminal_input_9.setText(Constant.textModule.getName());
         }
     }

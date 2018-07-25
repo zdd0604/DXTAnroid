@@ -15,19 +15,6 @@ import java.util.Date;
 public class BusinessTimeUtils {
 
     /**
-     * @param timeStyle
-     * @return 时间格式
-     */
-    public static String getCurrentTime(String timeStyle) {
-        // 获取当前时间
-        SimpleDateFormat formatter = new SimpleDateFormat(timeStyle);
-        Date curDate = new Date(System.currentTimeMillis());
-        String currentTime = formatter.format(curDate);
-
-        return currentTime;
-    }
-
-    /**
      * 两个时间的比较
      * 格式 **:**
      *

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.dxtnerp.widget.ClearEditText
+        android:id="@+id/orderSearch_clEd"
+        style="@style/Item_EditeText_SearchEdStyle"
+        android:hint="@string/search" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orderSearch_rvl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orderSearch_clEd"
+        tools:listitem="@layout/module_layout_sales_order_item"/>
+
+    <LinearLayout
+        android:id="@+id/orderSearch_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bujige" />
+
+        <TextView
+            android:id="@+id/orderSearch_tvCorr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="找不到相关的项目"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

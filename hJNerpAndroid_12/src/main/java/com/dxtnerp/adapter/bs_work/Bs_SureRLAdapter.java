@@ -1,4 +1,4 @@
-package com.dxtnerp.adapter.ad_work;
+package com.dxtnerp.adapter.bs_work;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import com.dxtnerp.common.Constant;
 import com.dxtnerp.R;
 import com.dxtnerp.model.bs_work.TextModule;
 import com.dxtnerp.model.bs_work.TextModule2;
@@ -37,10 +37,10 @@ public class Bs_SureRLAdapter extends RecyclerView.Adapter<Bs_SureRLAdapter.View
         this.context = context;
         this.intDataType = intDataType;
         switch (intDataType) {
-            case 2:
+            case Constant.OperationIDNumb2:
                 this.list = list;
                 break;
-            case 3:
+            case Constant.OperationIDNumb3:
                 this.list2 = list2;
                 break;
         }
@@ -72,13 +72,13 @@ public class Bs_SureRLAdapter extends RecyclerView.Adapter<Bs_SureRLAdapter.View
             @Override
             public void onClick(View v) {
 
-                if (intDataType == 2)
+                if (intDataType == Constant.OperationIDNumb2)
                 {
                     for (TextModule data : list) {
                         data.setCheck(false);
                     }
                     list.get(position).setCheck(true);
-                }else if (intDataType == 3)
+                }else if (intDataType == Constant.OperationIDNumb3)
                 {
                     for (TextModule2 data : list2) {
                         data.setCheck(false);
@@ -95,10 +95,10 @@ public class Bs_SureRLAdapter extends RecyclerView.Adapter<Bs_SureRLAdapter.View
 
     @Override
     public int getItemCount() {
-        if (intDataType == 2)
+        if (intDataType == Constant.OperationIDNumb2)
         {
             return list.size();
-        }else if (intDataType == 3)
+        }else if (intDataType == Constant.OperationIDNumb3)
         {
             return list2.size();
         }

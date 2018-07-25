@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dgtdech_action"
+        android:scrollbars="none">
+
+        <LinearLayout style="@style/Item_LinearLayout_VerticalStyle">
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_marginTop="@dimen/size_8">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title1" />
+
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_date_opr"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_SalesOrderAddl_Hint1" />
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title2" />
+
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_date_demand"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_SalesOrderAddl_Hint2" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_title_id_ordtype"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title3" />
+
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_id_ordtype"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_SalesOrderAddl_Hint3" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/Item_LinearLayout_HorizontalStyle">
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_title_id_corr"
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title4" />
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_id_corr"
+                    style="@style/Item_LinearLayout_TvRightTitleImgStyle2"
+                    android:hint="@string/bs_SalesOrderAddl_Hint4" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title5" />
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_var_addr"
+                    style="@style/Item_LinearLayout_TvRightTitleStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title6" />
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_name_terminalr"
+                    style="@style/Item_LinearLayout_TvRightTitleStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Item_LinearLayout_HorizontalStyle"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/size_40">
+
+                <TextView
+                    style="@style/Item_LinearLayout_TVLeftTieleStyle2"
+                    android:text="@string/bs_SalesOrderAddl_Title7" />
+
+                <TextView
+                    android:id="@+id/bs_SalesOrderAdd_id_recorder"
+                    style="@style/Item_LinearLayout_TvRightTitleStyle" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Item_LinearLayout_TvTitle"
+                android:text="@string/bs_SalesOrderAddl_Title8"/>
+
+            <LinearLayout
+                android:id="@+id/salesOrder_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/salesOrder_addBtn"
+        android:layout_width="@dimen/size_45"
+        android:layout_height="@dimen/size_45"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/size_10"
+        android:layout_marginRight="@dimen/size_10"
+        android:background="@drawable/per_button_shape"
+        android:gravity="center"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_20" />
+</RelativeLayout>

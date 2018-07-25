@@ -47,6 +47,7 @@ import com.dxtnerp.dao.OtherBaseDao;
 import com.dxtnerp.model.IDComConfig;
 import com.dxtnerp.model.md_ctlm.Ctlm1108;
 import com.dxtnerp.util.StringUtil;
+import com.dxtnerp.util.date.DateUtil;
 import com.dxtnerp.util.file.ZipUtils;
 import com.dxtnerp.util.businessutils.BuinessImgUtils;
 import com.dxtnerp.util.businessutils.BusinessFileUtils;
@@ -310,8 +311,7 @@ public class BusinessEJLocation extends ActivityBaseHeader implements View.OnCli
         if (BusinessQueryDao.getUserInfo(context)) {
             IntentCamera();
         } else {
-            Intent intent = new Intent(BusinessEJLocation.this, SetActivity.class);
-            startActivity(intent);
+            intentActivity(SetActivity.class);
         }
     }
 
@@ -323,7 +323,7 @@ public class BusinessEJLocation extends ActivityBaseHeader implements View.OnCli
         //获取照片集合名称
         String photoname = getPhotoName();
         //获取打卡时间
-        sgin_time = BusinessTimeUtils.getCurrentTime(Constant.SGIN_FORMART);
+        sgin_time = DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd_HH_mm_ss);
 
         if (BusinessQueryDao.getUserInfo(context)) {
             IDComConfig idconfig = OtherBaseDao.queryReginfo(Constant.ej1345.getId_com());
@@ -421,7 +421,7 @@ public class BusinessEJLocation extends ActivityBaseHeader implements View.OnCli
      * 判断考勤签到信息
      */
     private void judgeLocationData() {
-        todayTime = BusinessTimeUtils.getCurrentTime(Constant.TIME_yyyy_MM_dd);
+        todayTime = DateUtil.getCurrentTime(Constant.TIME_yyyy_MM_dd);
         List<Ctlm1108> ctlm1108List = BusinessBaseDao.selectCtlm1108(
                 Constant.ej1345.getId_clerk(), todayTime);
         if (ctlm1108List.size() > 0) {
@@ -504,7 +504,7 @@ public class BusinessEJLocation extends ActivityBaseHeader implements View.OnCli
      */
     private void IntentCamera() {
         try {
-            photoName = "ph" + BusinessTimeUtils.getCurrentTime(Constant.SGIN_PHOTONAME) + Constant.ej1345.getId_user();
+            photoName = "ph" + DateUtil.getCurrentTime(Constant.SGIN_PHOTONAME) + Constant.ej1345.getId_user();
             photoLocation = photoPath + "/" + photoName + ".jpg";
             BusinessFileUtils.creatFile(photoPath);
 

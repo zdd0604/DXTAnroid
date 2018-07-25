@@ -22,19 +22,15 @@ import android.widget.TextView;
 
 import com.dxtnerp.business.bs_work.AddTerminalActivity;
 import com.dxtnerp.business.bs_work.ConsumSpendeActivity;
+import com.dxtnerp.business.bs_work.SalesOrderActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.dxtnerp.activity.SetActivity;
 import com.dxtnerp.adapter.ad_biness.BusinessGridViewAdapter;
 import com.dxtnerp.dao.BusinessQueryDao;
-import com.dxtnerp.adapter.ad_ctlm.Ctlm1346Update;
-import com.dxtnerp.business.bs_activity.BusinessBillsActivity;
-import com.dxtnerp.business.bs_activity.BusinessDdisplocathActivity;
-import com.dxtnerp.business.bs_activity.BusinessDgtdrechtml;
+import com.dxtnerp.adapter.ad_ctlm.Ctlm1346Update;;
 import com.dxtnerp.business.bs_activity.BusinessEJLocation;
-import com.dxtnerp.business.bs_activity.BusinessPerformanceArrayList;
 import com.dxtnerp.business.bs_activity.BussinessHtmlActivity;
-import com.dxtnerp.business.bs_activity.TravelActivityNew;
 import com.dxtnerp.common.Constant;
 import com.dxtnerp.common.EapApplication;
 import com.dxtnerp.dao.BusinessBaseDao;
@@ -215,84 +211,83 @@ public class BusinessFragment<Divider> extends CommonFragment {
 
         logShow("XML模板名称：" + Constant.Clicked_xml_nameModel);
 
-        if (!BusinessQueryDao.getUserInfo(context)){
+        if (!BusinessQueryDao.getUserInfo(context)) {
             intent = new Intent(fragment.getActivity(), SetActivity.class);
         } else
-        //终端拜访
-        if (clicked_id_model.equals(Constant.discard)){
+            //终端拜访
+            if (clicked_id_model.equals(Constant.discard)) {
 
-        } else
-            //商务拜访
-        if (clicked_id_model.equals(Constant.ddiscccard)){
+            } else
+                //商务拜访
+                if (clicked_id_model.equals(Constant.ddiscccard)) {
 
-        } else
-            //市场检查
-        if (clicked_id_model.equals(Constant.ddischeck)){
+                } else
+                    //市场检查
+                    if (clicked_id_model.equals(Constant.ddischeck)) {
 
-        } else
-            //销售订单申请
-        if (clicked_id_model.equals(Constant.dsaordhtml)){
+                    } else
+                        //销售订单申请
+                        if (clicked_id_model.equals(Constant.dsaordhtml)) {
+                            fromClass = SalesOrderActivity.class;
+                        } else
+                            //新增终端
+                            if (clicked_id_model.equals(Constant.nterminalhtml)) {
+                                fromClass = AddTerminalActivity.class;
+                            } else
+                                //报销单
+                                if (clicked_id_model.equals(Constant.dfeeothhtml)) {
+                                    fromClass = ConsumSpendeActivity.class;
+                                } else
+                                    //终端修改
+                                    if (clicked_id_model.equals(Constant.mterminalhtml)) {
 
-        } else
-            //新增终端
-        if (clicked_id_model.equals(Constant.nterminalhtml)){
-            fromClass = AddTerminalActivity.class;
-        } else
-            //报销单
-        if (clicked_id_model.equals(Constant.dfeeothhtml)){
-            fromClass = ConsumSpendeActivity.class;
-        } else
-            //终端修改
-        if (clicked_id_model.equals(Constant.mterminalhtml)){
+                                    } else
+                                        //运输单
+                                        if (clicked_id_model.equals(Constant.dsatrans)) {
 
-        } else
-            //运输单
-        if (clicked_id_model.equals(Constant.dsatrans)){
+                                        } else
+                                            //工作日志
+                                            if (clicked_id_model.equals(Constant.ddissumaryhtml)) {
 
-        } else
-            //工作日志
-        if (clicked_id_model.equals(Constant.ddissumaryhtml)){
+                                            } else
+                                                //销量上报
+                                                if (clicked_id_model.equals(Constant.dsarptp)) {
 
-        } else
-            //销量上报
-        if (clicked_id_model.equals(Constant.dsarptp)){
+                                                } else
+                                                    //考勤签到照片
+                                                    if (clicked_id_model.equals(Constant.ddisplocatphohtml)) {
+                                                        fromClass = BusinessEJLocation.class;
+                                                    } else
+                                                        //拜访业绩
+                                                        if (clicked_id_model.equals(Constant.discardquery)) {
 
-        } else
-            //考勤签到照片
-        if (clicked_id_model.equals(Constant.ddisplocatphohtml)){
-            fromClass = BusinessEJLocation.class;
-        } else
-            //拜访业绩
-        if (clicked_id_model.equals(Constant.discardquery)){
+                                                        } else
+                                                            //拜访情况
+                                                            if (clicked_id_model.equals(Constant.cdiscard)) {
 
-        } else
-            //拜访情况
-        if (clicked_id_model.equals(Constant.cdiscard)){
+                                                            } else
+                                                                //考勤记录
+                                                                if (clicked_id_model.equals(Constant.ddisplocatquery)) {
 
-        } else
-            //考勤记录
-        if (clicked_id_model.equals(Constant.ddisplocatquery)){
+                                                                } else
+                                                                    //订单申请查询
+                                                                    if (clicked_id_model.equals(Constant.dsaordzxqk)) {
 
-        } else
-            //订单申请查询
-        if (clicked_id_model.equals(Constant.dsaordzxqk)){
+                                                                    } else
+                                                                        //待审单据查询
+                                                                        if (clicked_id_model.equals(Constant.dflagsts)) {
 
-        } else
-            //待审单据查询
-        if (clicked_id_model.equals(Constant.dflagsts)){
-
-        } else
-        {
-            fromClass = BussinessHtmlActivity.class;
-            intent.putExtra("id_model", clicked_id_model);
-        }
+                                                                        } else {
+                                                                            fromClass = BussinessHtmlActivity.class;
+                                                                            intent.putExtra("id_model", clicked_id_model);
+                                                                        }
 
         //判断本地是否有模版
-        if (fromClass!=null){
+        if (fromClass != null) {
             intent = new Intent(fragment.getActivity(), fromClass);
             fragment.startActivity(intent);
-        }else {
-            myToastShow(context,"模版尚未开发");
+        } else {
+            myToastShow(context, "模版尚未开发");
         }
     }
 
@@ -698,7 +693,7 @@ public class BusinessFragment<Divider> extends CommonFragment {
         super.onResume();
         /*
          * @author haijian 检查是否显示泡泡
-		 */
+         */
         checkPaoPao();
         refreshList();
     }

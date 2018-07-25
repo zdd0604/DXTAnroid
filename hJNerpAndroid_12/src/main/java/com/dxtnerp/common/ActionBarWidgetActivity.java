@@ -50,6 +50,7 @@ import java.util.zip.ZipInputStream;
 public class ActionBarWidgetActivity extends ActivitySupport {
     public static Context mContext;
     protected Gson mGson;
+    protected Bundle mBundle;
     //弹框
     protected WaitDialogRectangle waitDialog;
     protected WaitDialogRectangle waitDialogRectangle;
@@ -110,7 +111,10 @@ public class ActionBarWidgetActivity extends ActivitySupport {
      */
     private void initView() {
         mContext = this;
-        mGson = new Gson();
+        if (mGson == null)
+            mGson = new Gson();
+        if (mBundle == null)
+            mBundle = new Bundle();
         waitDialog = new WaitDialogRectangle(mContext);
         waitDialogRectangle = new WaitDialogRectangle(mContext);
 
@@ -144,11 +148,12 @@ public class ActionBarWidgetActivity extends ActivitySupport {
 
     /**
      * 得到名字布局
+     *
      * @param name
      * @return
      */
-    public static View getPotoView(Context context,String name){
-        View phView = LayoutInflater.from(context).inflate(R.layout.view_name_photo,null);
+    public static View getPotoView(Context context, String name) {
+        View phView = LayoutInflater.from(context).inflate(R.layout.view_name_photo, null);
         TextView nameImg = (TextView) phView.findViewById(R.id.view_nameph_img);
         nameImg.setText(name);
         return phView;
@@ -218,11 +223,12 @@ public class ActionBarWidgetActivity extends ActivitySupport {
 
     /**
      * 带数据跳转
+     *
      * @param to
      * @param bundle
      * @param ac_type
      */
-    public void intentActivity(Class to, Bundle bundle,int ac_type) {
+    public void intentActivity(Class to, Bundle bundle, int ac_type) {
         Intent intent = new Intent(mContext, to);
         intent.putExtras(bundle);
         startActivityForResult(intent, ac_type);
@@ -263,7 +269,7 @@ public class ActionBarWidgetActivity extends ActivitySupport {
     public void logShow(String content) {
         StackTraceElement ste = new Throwable().getStackTrace()[1];
         if (Constant.IS_LOG_SHOW_VIEW)
-            Log.e("DXT", "文件名称："+getClass().getSimpleName()
+            Log.e("DXT", "文件名称：" + getClass().getSimpleName()
                     + "，行号：" + ste.getLineNumber()
                     + "，内容：" + content);
     }
@@ -273,6 +279,21 @@ public class ActionBarWidgetActivity extends ActivitySupport {
         TextPaint newPaint = new TextPaint();
         return (int) newPaint.measureText(string);
     }
+
+    /**
+     * 发送消息
+     *
+     * @param mHandler
+     * @param numb
+     * @param o
+     */
+    public void setHandlerMsg(Handler mHandler, int numb, Object o) {
+        Message message = new Message();
+        message.what = numb;
+        message.obj = o;
+        mHandler.sendMessage(message);
+    }
+
 
     /**
      * 选择时间
